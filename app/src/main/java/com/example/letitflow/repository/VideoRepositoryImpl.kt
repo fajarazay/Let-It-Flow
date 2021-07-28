@@ -8,7 +8,7 @@ import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 
 class VideoRepositoryImpl(private val videoService: VideoService) : VideoRepository {
-    override suspend fun fetchVideoList(): Flow<List<VideoItem>> {
+    override fun fetchVideoList(): Flow<List<VideoItem>> {
         return flow {
             val response = videoService.fetchVideoList()
             emit(response)
