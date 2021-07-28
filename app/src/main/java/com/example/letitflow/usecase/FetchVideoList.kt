@@ -4,5 +4,5 @@ import com.example.letitflow.model.VideoItem
 import kotlinx.coroutines.flow.Flow
 
 interface FetchVideoList {
-    suspend fun execute(): Flow<List<VideoItem>>
+    fun execute(): Flow<List<VideoItem>>
 }
